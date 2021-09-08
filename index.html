@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        body{
+            font-size: 2em;
+            background-color: gray;
+            color: white;
+        }
+    </style>
+
+    <script>
+
+        // Создан масив styles.
+        var styles = ["Джаз", "Блюз"];
+            document.write("<p>Исходный: " + styles.join(", ") + ".");
+                document.write("<hr/>");
+
+        // Добавление елемента «Рок-н-ролл» в конец.
+        var style = styles.push("Рок-н-ролл");
+            document.write("<p>После добавления: " + styles.join(", ") + ".");
+                document.write("<hr/>");
+
+        // Замена значения "Блюз" на "Класика".
+        var removedElement = styles.splice(1, 1);
+            styles.splice(1 , 0, "Класика");
+            lenght = styles.length;
+            document.write("<p>Удалено: " + removedElement + ".");
+            document.write("<p>После замены: " + styles.join(", ") + ".");
+                document.write("<hr/>");
+        
+        // Удаление первого елемента "Джаз".
+        var removeElement = styles.splice(0, 1);
+            lenght = styles.length;
+            document.write("<p>Удалено: " + removeElement + ".");
+            document.write("<p>После удаления: " + styles.join(", ") + ".");
+                document.write("<hr/>");
+        
+        // Вставка елементов «Рэп» и «Регги» в начало массива.
+        styles.unshift("Рэп", "Регги");
+        document.write("<p>После вставки: " + styles.join(", ") + ".");
+            document.write("<hr/>");
+        
+    </script>
+
+</body>
+</html>
